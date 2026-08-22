@@ -265,3 +265,17 @@ body {
   background-color: #d9534f;
   color: #fff;
 }
+
+.pesan-panjang {
+  position: relative;
+  width: 84%;
+  height: 84%;
+  margin: 8% auto;
+  background-color: #ffe6e6; /* Warna latar belakang teks yang romantis */
+  font-size: 1rem;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  overflow-y: auto; /* Memunculkan scroll jika teksnya super panjang */
+}

@@ -50,7 +50,6 @@
   border-radius: 6px;
   box-shadow: 0 2px 26px rgba(0, 0, 0, 0.12);
   font-family: "Dancing Script", cursive;
-  overflow: hidden;
 }
 
 .letter:after {
@@ -109,17 +108,22 @@
   z-index: 5;
 }
 
-.close .letter {
-  transform: translateY(0px);
-  transition: transform 0.4s ease, z-index 1s;
-  z-index: 1;
+.open .letter {
+  transform: translateY(-60px); /* Kertas ditarik ke atas sedikit */
+  width: 320px; /* Kertas melebar dari ukuran aslinya */
+  height: 400px; /* Kertas memanjang ke bawah */
+  left: -34px; /* Digeser sedikit ke kiri agar posisinya tetap di tengah */
+  transition: transform 0.6s 0.6s ease, width 0.6s 0.6s ease, height 0.6s 0.6s ease, left 0.6s 0.6s ease, z-index 0.6s;
+  z-index: 10; /* Kertas pindah ke lapisan paling depan menutupi saku amplop */
 }
 
-.open .letter {
-  transform: translateY(-160px); /* Kertas ditarik lebih tinggi */
-  height: 250px; /* Kertas otomatis memanjang agar area baca jauh lebih luas */
-  transition: transform 0.4s 0.6s ease, height 0.4s 0.6s ease, z-index 0.6s;
-  z-index: 10;
+.close .letter {
+  transform: translateY(0px);
+  width: 252px; /* Kembali ke ukuran lebar awal */
+  height: 162px; /* Kembali ke ukuran tinggi awal */
+  left: 0;
+  transition: transform 0.4s ease, width 0.4s ease, height 0.4s ease, left 0.4s ease, z-index 1s;
+  z-index: 1; /* Masuk kembali ke dalam saku amplop */
 }
 
 .hearts {
@@ -237,7 +241,7 @@ body {
 }
 
 .envlope-wrapper {
-  height: 380px;
+  height: 550px; /* Diperbesar agar ada ruang untuk kertas memanjang ke bawah */
 }
 
 .reset {

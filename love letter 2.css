@@ -114,9 +114,9 @@
 }
 
 .open .letter {
-  transform: translateY(-100px);
+  transform: translateY(-130px); /* Kertas ditarik lebih tinggi agar mudah dibaca */
   transition: transform 0.4s 0.6s ease, z-index 0.6s;
-  z-index: 2;
+  z-index: 10; /* Kertas diletakkan di lapisan paling depan agar gampang di-scroll */
 }
 
 .hearts {

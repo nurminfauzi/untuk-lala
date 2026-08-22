@@ -30,12 +30,13 @@
 }
 
 .pocket {
-  border-left: 140px solid #f5a3a2; /* Soft pinkish red for the pocket */
+  border-left: 140px solid #f5a3a2; 
   border-right: 140px solid #f5a3a2;
-  border-bottom: 90px solid #ff6f61; /* Lighter romantic red */
+  border-bottom: 90px solid #ff6f61; 
   border-top: 90px solid transparent;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
+  pointer-events: none; /* Tambahkan baris ini agar saku amplop tidak menghalangi scroll */
 }
 
 .letter {

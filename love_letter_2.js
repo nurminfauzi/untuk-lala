@@ -5,6 +5,7 @@ $(document).ready(function () {
   var resetBar = $(".reset");
   var overlay = $("#full-letter-overlay");
   var btnCloseLetter = $("#close-letter");
+  var bgMusic = document.getElementById("bg-music");
 
   envelope.on("click", openEnvelope);
   btnOpen.on("click", openEnvelope);
@@ -19,6 +20,9 @@ $(document).ready(function () {
 
   function openEnvelope() {
     if (envelope.hasClass("open")) return;
+
+    // Mulai musik (dipicu dari klik user, jadi tidak diblokir browser)
+    bgMusic.play();
 
     envelope.addClass("open").removeClass("close");
     resetBar.addClass("hidden-btn");
